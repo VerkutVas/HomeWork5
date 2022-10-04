@@ -3,7 +3,56 @@
 //[3, 7, 23, 12] -> 19
 //[-4, -6, 89, 6] -> 0
 
-Console.WriteLine("Введите количество чисел в массиве");
+
+int number = Convert.ToInt32(Console.ReadLine()); 
+
+int RandomNumbers(int numberElements, int min, int max)
+  {
+  int[] randomNumbers = new int[numberElements];
+  int sumElements = 0;
+  Console.Write(" ");
+
+    for (int i = 0; i <randomNumbers.Length; i++ ){
+      randomNumbers[i] = new Random().Next(min, max);
+
+      Console.Write(randomNumbers[i] + " ");
+
+      if (i % 2 != 1)
+      {
+        sumElements = sumElements + randomNumbers[i];
+      }
+    }
+  return sumElements;
+  }
+
+int randomNumbers =  RandomNumbers(number, 1, 10);
+
+Console.WriteLine($"\nСумма элементов: {randomNumbers}");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Console.WriteLine("Введите количество чисел в массиве");
 
 int size = Convert.ToInt32(Console.ReadLine());
 int [] array = new int [size];
@@ -36,4 +85,4 @@ void PositivNumber(int[] array)
 
 
 FullArray(array);
-PositivNumber(array);
+PositivNumber(array); */
